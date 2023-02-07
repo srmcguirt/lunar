@@ -1,4 +1,6 @@
 {
-  "extends": ["eslint-config-unjs"],
-  "rules": {}
+  "extends": ["@antfu/eslint-config"],
+  "rules": {
+    "no-console": "off"
+  }
 }
