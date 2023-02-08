@@ -1,6 +1,7 @@
 {
   "extends": ["@antfu/eslint-config"],
   "rules": {
-    "no-console": "off"
+    "no-console": "off",
+    "unused-imports/no-unused-imports": "warn"
   }
 }
