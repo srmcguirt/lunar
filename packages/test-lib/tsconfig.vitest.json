@@ -1,0 +1,7 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["test/*.{test,spec}.*", "test/**/*.{test,spec}.*"],
+  "compilerOptions": {
+    "types": ["node", "jsdom", "vitest", "vite/client"]
+  }
+}

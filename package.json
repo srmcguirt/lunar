@@ -1,0 +1,53 @@
+{
+  "name": "monorepo",
+  "description": "Template description",
+  "private": true,
+  "scripts": {
+    "commit": "git-cz",
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky install",
+    "bootstrap:ci": "pnpm i --frozen-lockfile",
+    "clean": "turbo run clean --parallel",
+    "lint": "turbo run lint --parallel",
+    "test": "turbo run test --parallel",
+    "test:watch": "turbo run test:watch",
+    "test:prod": "turbo run test:prod --parallel",
+    "build": "turbo run build --parallel",
+    "build:prod": "turbo run build --parallel"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^17.5.1",
+    "@rollup/plugin-typescript": "^11.1.0",
+    "@srmcguirt/auto-config": "latest",
+    "@srmcguirt/commitlint-config": "latest",
+    "@srmcguirt/eslint-config": "latest",
+    "@srmcguirt/prettier-config": "latest",
+    "@types/node": "^18.15.11",
+    "auto": "^10.44.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.37.0",
+    "husky": "^8.0.3",
+    "lerna": "^6.6.1",
+    "lint-staged": "^13.2.0",
+    "pnpm": "^8.1.1",
+    "prettier": "^2.8.7",
+    "turbo": "^1.8.8",
+    "type-fest": "^3.7.2",
+    "typescript": "latest"
+  },
+  "repository": "srmcguirt/turbo-template",
+  "version": "0.0.0",
+  "packageManager": "pnpm@8.1.1",
+  "eslintConfig": {
+    "extends": [
+      "@srmcguirt"
+    ]
+  },
+  "auto": {
+    "extends": [
+      "@srmcguirt"
+    ]
+  }
+}
