@@ -1,0 +1,55 @@
+{
+  "name": "@srmcguirt/lunar-fn",
+  "version": "0.0.0",
+  "description": "Lunar functional library",
+  "repository": "srmcguirt/lunar-fn",
+  "author": "Shane McGuirt",
+  "license": "MIT",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/functional.d.ts",
+      "import": "./dist/functional.es.js",
+      "require": "./dist/functional.cjs.js"
+    }
+  },
+  "main": "./dist/functional.cjs.js",
+  "module": "./dist/functional.es.js",
+  "types": "./dist/functional.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "build:prod": "cross-env NODE_ENV=production pnpm compile",
+    "coverage": "vitest run --coverage",
+    "lint": "eslint . --ext .js,.ts,.tsx --cache",
+    "prepack": "pnpm build",
+    "test": "pnpm lint && pnpm coverage",
+    "test:ui": "vitest --ui"
+  },
+  "devDependencies": {
+    "@srmcguirt/eslint-config": "latest",
+    "@types/node": "^18.15.11",
+    "@vitest/coverage-c8": "latest",
+    "@vitest/ui": "latest",
+    "esbuild": "latest",
+    "eslint": "latest",
+    "jsdom": "latest",
+    "tsconfig": "workspace:*",
+    "typescript": "latest",
+    "unplugin-auto-import": "latest",
+    "vite": "latest",
+    "vite-plugin-dts": "latest",
+    "vitest": "latest"
+  },
+  "packageManager": "pnpm@8.1.1",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "vite": ">=3.0.0",
+    "node": ">=14.0.0"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "extends": "tsconfig/lib.json",
+  "include": [
+    "vite-env.d.ts",
+    "source/**/*",
+    "source/**/*.ts",
+    "source/**/*.json"
+  ],
+  "exclude": [".*.js", "*.js", "*.*js", "*.*.*js"],
+  "compilerOptions": {
+    "baseUrl": ".", // This must be specified if "paths" is.
+    "paths": {
+      "@/*": ["./source/*"],
+      "#/*": ["./types/*"],
+      "~/*": ["./test/*"]
+    }
+  }
+}

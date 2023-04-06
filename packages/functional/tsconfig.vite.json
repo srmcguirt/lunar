@@ -1,0 +1,10 @@
+{
+  "extends": "tsconfig/vite.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "jsx": "preserve",
+    "target": "ESNext",
+    "types": ["node", "vitest", "vite/client"]
+  },
+  "include": ["vite.config.*"]
+}

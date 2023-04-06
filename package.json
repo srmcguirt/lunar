@@ -12,7 +12,7 @@
     "test": "turbo run test --parallel",
     "test:watch": "turbo run test:watch",
     "test:prod": "turbo run test:prod --parallel",
-    "build": "turbo run build --parallel",
+    "build": "turbo run build --parallel --filter=!test-lib",
     "build:prod": "turbo run build --parallel"
   },
   "license": "MIT",
@@ -37,7 +37,7 @@
     "type-fest": "^3.7.2",
     "typescript": "latest"
   },
-  "repository": "srmcguirt/turbo-template",
+  "repository": "srmcguirt/lunar",
   "version": "0.0.0",
   "packageManager": "pnpm@8.1.1",
   "eslintConfig": {
